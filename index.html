@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Sentiment Analysis</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Rating the Review by Sentiment Analysis</h1>
+        <form method="POST">
+            <label for="text">Enter your Review:</label>
+            <textarea id="text" name="text" rows="4" cols="50" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        {% if text %}
+            <div class="output-box">
+                <p class="number-of-stars">Review : <strong>{{ text }}</strong></p>
+                <p class="number-of-stars">Rating : <strong>{{ predicted_rating }}</strong></p>
+            
+            {% if predicted_rating == 1 %}
+                <p class="star">⭐</p>
+            {% elif predicted_rating == 2 %}
+                <p class="star">⭐⭐</p>
+            {% elif predicted_rating == 3 %}
+                <p class="star">⭐⭐⭐</p>
+            {% elif predicted_rating == 4 %}
+                <p class="star">⭐⭐⭐⭐</p>
+            {% elif predicted_rating == 5 %}
+                <p class="star">⭐⭐⭐⭐⭐</p>
+            {% endif %}
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
