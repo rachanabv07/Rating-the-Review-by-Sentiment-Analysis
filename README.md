@@ -17,7 +17,7 @@ There are 11 columns in this dataset.
 
 ## SKills
 
-- Python
+- Python - 3.11
 - Pandas
 - Numpy
 - Matplotlib
@@ -30,10 +30,8 @@ There are 11 columns in this dataset.
 - Multinomial naive_bayes
 - RandomForestClassifier
 - resampling techniques for improved model performance.
-- HTML
-- Flask
-- CSS
-
+- Frontend - HTML, CSS
+- Framwork - Flask
 
 ## Installation
 ```bash
